@@ -1,0 +1,66 @@
+[
+  {
+    "idProducto": 1,
+    "idTipoProducto": 1,
+    "codigoInterno": "PD001",
+    "nombre": "Cap",
+    "estado": "Activo",
+    "precio": 10,
+    "imagen": "cap.jpg"
+  },
+  {
+    "idProducto": 2,
+
+    "codigoInterno": "PD002",
+    "idTipoProducto": 1,
+    "nombre": "T-shirt",
+    "estado": "Activo",
+    "precio": 20,
+    "imagen": "t-shirt.jpg"
+  },
+  {
+    "idProducto": 3,
+    "idTipoProducto": 2,
+    "codigoInterno": "PD003",
+    "nombre": "Gym Bag",
+    "estado": "Inactivo",
+    "precio": 25,
+    "imagen": "gym bag.jpg"
+  },
+  {
+    "idProducto": 4,
+    "idTipoProducto": 2,
+    "codigoInterno": "PD004",
+    "nombre": "Water Bottle",
+    "estado": "Activo",
+    "precio": 10,
+    "imagen": "water bottle.jpg"
+  },
+  {
+    "idProducto": 5,
+    "idTipoProducto": 1,
+    "codigoInterno": "PD005",
+    "nombre": "Jacket",
+    "estado": "Activo",
+    "precio": 30,
+    "imagen": "waterproof jacket.jpg"
+  },
+  {
+    "idProducto": 6,
+    "idTipoProducto": 1,
+    "codigoInterno": "PD006",
+    "nombre": "Athletic Shorts",
+    "estado": "Inactivo",
+    "precio": 15,
+    "imagen": "athletic short.jpg"
+  },
+  {
+    "idProducto": 7,
+    "idTipoProducto": 2,
+    "codigoInterno": "PD007",
+    "nombre": "Stretch band",
+    "estado": "Activo",
+    "precio": 12,
+    "imagen": "stretch band.jpg"
+  }
+]
