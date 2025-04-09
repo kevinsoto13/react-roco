@@ -4,7 +4,7 @@ import { ItemListContainer } from './components/itemListContainer/itemListContai
 import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/hero'
 import Footer from './components/footer/Footer'
-import { ItemDetailContainer } from './components/itemDetailContainer/ItemDetailContainer'
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { ShopComponentContext } from './context/ShopContext'
 import { Cart } from './components/cart/cart'
 
