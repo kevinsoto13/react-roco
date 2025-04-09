@@ -26,7 +26,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <div className="redes-container">
+        <div className="redes-cart">
           <CartWidget></CartWidget>
         </div>
       </header>
