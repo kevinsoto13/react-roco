@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { ItemListContainer } from './components/itemListContainer/itemListContainer'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/hero'
 import Footer from './components/footer/Footer'
