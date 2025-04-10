@@ -1,4 +1,4 @@
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/client";
 import { ItemList } from "../itemList/itemList";
 import { useEffect, useState } from "react";
