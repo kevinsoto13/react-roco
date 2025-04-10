@@ -6,7 +6,7 @@ import Hero from './components/hero/hero'
 import Footer from './components/footer/Footer'
 import { ItemDetailContainer } from './components/itemDetailContainer/ItemDetailContainer'
 import { ShopComponentContext } from './context/ShopContext'
-import { Cart } from './components/cart/cart'
+import { Cart } from './components/cart/Cart'
 
 function App() {
 
