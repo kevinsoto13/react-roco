@@ -9,12 +9,12 @@ export const ShopComponentContext = ({ children }) => {
 
     const handleAddToCart = (product) => {
         
-        const productInCart = cart.find(item => item.id === product.id)
+        const productInCart = cart.find(item => item.idProducto === product.idProducto)
         
         if (productInCart) {
           setCart(
             cart.map(item => 
-              item.id === product.id ? { ...item, quantity: item.quantity + product.quantity } : item
+              item.idProducto === product.idProducto ? { ...item, quantity: item.quantity + product.quantity } : item
             )
           )
         } else {
@@ -23,7 +23,7 @@ export const ShopComponentContext = ({ children }) => {
       }
 
       const handleRemoveFromCart = (id) => {
-        setCart(cart.filter(item => item.id !== id));
+        setCart(cart.filter(item => item.idProducto !== id));
       }
 
       const getTotalItems = () => {
@@ -36,7 +36,7 @@ export const ShopComponentContext = ({ children }) => {
           const clampedQuantity = Math.max(1, Math.min(10, newQuantity))
           
           return prevCart.map(item => 
-            item.id === productId 
+            item.idProducto === productId 
               ? { ...item, quantity: clampedQuantity } 
               : item
           )

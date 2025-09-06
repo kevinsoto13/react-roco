@@ -5,6 +5,16 @@ import { Alert } from "@mui/material"
 import CheckIcon from '@mui/icons-material/Check'
 import Snackbar from '@mui/material/Snackbar';
 import { AlertNotification } from "../alert/AlertNotification"
+import PropTypes from "prop-types"
+
+const imageModules = import.meta.glob("../../assets/img/*.{jpg,png}", { eager: true })
+
+const images = Object.fromEntries(
+  Object.entries(imageModules).map(([path, module]) => {
+    const fileName = path.split("/").pop() // ej: "cap.jpg"
+    return [fileName, module.default]
+  })
+)
 
 export const Item = ({ producto }) => {
     const navigate = useNavigate()
@@ -19,9 +29,9 @@ export const Item = ({ producto }) => {
 
 
     return (
-        <div key={producto.id} className="box">
+        <div key={producto.idProducto || producto.id} className="box">
             <div className="box-top">
-                <img className="box-image" src={producto.imagen} alt={producto.nombre} style={{ cursor: "pointer" }} onClick={() => navigate(`/item/${producto.id}`)} />
+                <img className="box-image" src={images[producto.imagen]} alt={producto.nombre} style={{ cursor: "pointer" }} onClick={() => navigate(`/item/${producto.idProducto}`)} />
                 <div className="title-flex">
                     <h3 className="box-title">{producto.nombre}</h3>
                 </div>
@@ -41,4 +51,15 @@ export const Item = ({ producto }) => {
                       />
         </div>
     )
+}
+
+Item.propTypes = {
+  producto: PropTypes.shape({
+    idProducto: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    idTipoProducto: PropTypes.number.isRequired,
+    nombre: PropTypes.string.isRequired,
+    precio: PropTypes.number.isRequired,
+    imagen: PropTypes.string.isRequired,
+  }).isRequired,
 }

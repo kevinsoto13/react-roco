@@ -18,7 +18,7 @@ export const ItemList = ({products}) => {
         <section className="conocimiento">
             <h2 className="m-5">{categoryId === 'ropa' ? "Ropa" : categoryId === 'accesorios' ? "Accesorios" : "Productos destacados"}</h2>
             <div id="containerCards" className="wrap">
-                {filteredData?.map((product) => <Item key={product.id} producto={product} />)}
+                {filteredData?.map((product) => <Item key={product.idProducto} producto={product} />)}
             </div>
         </section>
     )
