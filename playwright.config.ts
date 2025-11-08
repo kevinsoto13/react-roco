@@ -26,7 +26,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
   baseURL: 'http://localhost:5173', // 👈 Cambia el puerto si tu app usa otro
-  headless: false, // para ver el navegador al correr los tests
+  headless: !!process.env.CI || false, // 👈 Usa headless solo en CI
   trace: 'on-first-retry',
 },
 
